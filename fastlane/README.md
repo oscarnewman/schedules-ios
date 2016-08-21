@@ -25,7 +25,7 @@ Download/create push certificates
 ```
 fastlane ios beta
 ```
-Submit a new Beta Build to Apple TestFlight
+Submit a new Beta Build to Crashylitcs
 
 This will also make sure the profile is up to date
 ### ios appstore
