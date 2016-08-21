@@ -1,0 +1,16 @@
+LASA Schedules is the bell schedule, reimagined for iPhone. With just a glance, see your next class and how many minutes are left until it begins. Your entire day is just one tap away.
+
+LASA Schedules tracks your time intelligently by not only providing one place to view all of the LASA bell schedules, but by syncing them to your day at school. Enable badge notifications to see a live countdown of minutes until your next class on the Schedules icon. Push notifications remind you that Wednesday is an advisory day, tell you whether Friday is an A or B day, and inform you of which LASA events are coming up soon.
+
+
+FEATURES
+– Tells when your current class starts and ends
+– Shows live countdown of minutes until your next class
+– Quickly check the time until your next class with a badge on the app icon
+– Displays your entire day’s schedule with one tap on the home screen
+– Collects all of the other LASA bell schedules in one place
+– Receive push notifications about the week’s schedule, schedule changes, and LASA events
+
+
+CREDITS
+Created by Oscar Newman for the LASA 2017 Student Council. Dubious moral support provided by Quinn Simpson.

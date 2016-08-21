@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Moya
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var provider: MoyaProvider<Devices>!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        Fabric.with([Crashlytics.self])
+
+        application.applicationIconBadgeNumber = 0
+        registerForPushNotifications(application)
         return true
     }
 
@@ -39,6 +47,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func registerForPushNotifications(application: UIApplication) {
+        let notificationSettings = UIUserNotificationSettings(
+            forTypes: [.Badge, .Sound, .Alert], categories: nil)
+        application.registerUserNotificationSettings(notificationSettings)
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        if notificationSettings.types != .None {
+             application.registerForRemoteNotifications()
+        }
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
+        var token = ""
+        
+        for i in 0..<deviceToken.length {
+            token += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+        }
+        
+        print("Device Token:", token)
+        
+        let name = UIDevice().name
+        
+        provider = MoyaProvider<Devices>()
+        provider.request(Devices.Store(token: token, name: name)) { result in
+            switch result {
+            case let .Success(response):
+                let data = response.data
+                print(NSString(data: data, encoding: NSUTF8StringEncoding))
+            // do something with the response data or statusCode
+            case let .Failure(error):
+                print("failed to register: \(error)")
+                // this means there was a network failure - either the request
+                // wasn't sent (connectivity), or no response was received (server
+                // timed out).  If the server responds with a 4xx or 5xx error, that
+                // will be sent as a ".Success"-ful response.
+            }
+        }
+        
+        
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("Failed to register:", error)
     }
 
 

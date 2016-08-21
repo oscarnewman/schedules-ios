@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (3.4.1)
+  - Crashlytics (3.7.3):
+    - Fabric (~> 1.6.3)
+  - DateTools (1.7.0)
+  - Fabric (1.6.8)
+  - ModelMapper (2.1.0)
+  - Moya (7.0.0):
+    - Moya/Core (= 7.0.0)
+  - Moya-ModelMapper/Core (3.0.0):
+    - ModelMapper (~> 2.0)
+    - Moya (~> 7.0)
+  - Moya-ModelMapper/RxSwift (3.0.0):
+    - Moya-ModelMapper/Core
+    - Moya/RxSwift (~> 7.0)
+    - RxSwift (~> 2.3)
+  - Moya/Core (7.0.0):
+    - Alamofire (~> 3.0)
+    - Result (~> 2.0)
+  - Moya/RxSwift (7.0.0):
+    - Moya/Core
+    - RxSwift (~> 2.0)
+  - Result (2.1.3)
+  - RxCocoa (2.6.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.6.0)
+  - SVPullToRefresh (0.4.1)
+
+DEPENDENCIES:
+  - Crashlytics
+  - DateTools
+  - Fabric
+  - Moya-ModelMapper/RxSwift
+  - Moya/RxSwift
+  - RxCocoa
+  - RxSwift
+  - SVPullToRefresh
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
+  Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
+  Moya-ModelMapper: b4ffff5dfd8cdd338f5a586090eae82166df5ac4
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+
+PODFILE CHECKSUM: a35aa7f3d6b182c02a339b4840c546fa37ead07a
+
+COCOAPODS: 1.0.1

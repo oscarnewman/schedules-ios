@@ -1,0 +1,6 @@
+framework module Pods_Schedules2 {
+  umbrella header "Pods-Schedules2-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,4 @@
+- Added support for iPhone 6 and 6+
+- Added new schedules for the 2015-16 school year (except for split schedules)
+- Improved Layout
+- Bugfixes
