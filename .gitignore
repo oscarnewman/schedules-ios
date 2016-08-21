@@ -1,4 +1,4 @@
-/fastlane/report.xml -- temporary fastlane profiling data
+fastlane/report.xml -- temporary fastlane profiling data
 /fastlane/Error*.png -- temporary `deliver` error output
 /fastlane/Preview.html -- temporary `deliver` preview output
 /fastlane/screenshots/*/*-portrait.png -- generated screenshots
