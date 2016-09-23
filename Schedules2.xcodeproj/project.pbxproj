@@ -790,6 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Oscar Newman (SAQ9JTGAL5)";
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 48TMD47B79;
 				INFOPLIST_FILE = Schedules2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -804,6 +805,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Oscar Newman (48TMD47B79)";
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 48TMD47B79;
 				INFOPLIST_FILE = Schedules2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
